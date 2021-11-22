@@ -648,9 +648,38 @@ footer .row {
     resize: none;
 }
 .access form button {
-    margin: 10px 0;
-    border: none;
-    box-shadow: none;
+    font-size: 1rem;
+    color: var(--accent-color);
+    background: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;;
+    border: 1px solid var(--accent-color);
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.access form button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn {
+    font-size: 1rem;
+    color: #fff;background: var(--accent-color);
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.btn:hover {
+    letter-spacing: 6px;
 }
 @media (max-width: 767px) {
     .access .container {
