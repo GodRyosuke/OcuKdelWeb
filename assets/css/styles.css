@@ -479,7 +479,7 @@ footer .row {
 }
 .professor table tr td {
     border: 1px solid #111;
-    padding: 2px 0;
+    padding: 5px;
     font-weight: 300;;
 }
 
@@ -626,6 +626,7 @@ footer .row {
     font-size: 17px;
 }
 .access .row .left {
+    padding-right: 10px;
     flex: 3;
 }
 .access .row .right {
