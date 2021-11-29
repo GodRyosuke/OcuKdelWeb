@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
 :root {
     --main-color: rgba(165,197,214);
     --accent-color: rgba(20,78,148);
@@ -7,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif, 'Noto Sans JP';
     scroll-behavior: smooth;
 }
 body {
@@ -44,6 +45,7 @@ p {
 }
 .banner .content {
     max-width: 900px;
+    width: 90%;
     text-align: center;
 }
 .banner .content h2 {
@@ -249,6 +251,13 @@ section h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.professor .row .pro-col h2 {
+    font-weight: 400;
 }
 .professor .row .pro-col .imgBx {
     position: relative;
@@ -329,6 +338,9 @@ section h1 {
     margin: 0 5px;
     margin-bottom: 20px;
 }
+.research .row .res-col:nth-child(1) {
+    background-image: linear-gradient(rgba(30, 12, 4, 0.4),rgba(30, 26, 4, 0.7)),url(../img/svm.png);
+}
 .research .row .res-col .desc {
     display: block;
     width: 100%;
@@ -343,9 +355,7 @@ section h1 {
 .research .row .res-col .desc p {
     color: #fff;
 }
-.research .row .res-col:hover {
-    background-image: linear-gradient(rgba(30, 12, 4, 0.4),rgba(30, 26, 4, 0.7)),url(../img/cafeteria.png);
-}
+
 @media (max-width: 700px) {
     .research .row {
         flex-direction: column;
@@ -479,8 +489,14 @@ footer .row {
 }
 .professor table tr td {
     border: 1px solid #111;
-    padding: 5px;
+    padding: 5px 7px;
     font-weight: 300;;
+}
+
+@media (max-width:600px) {
+    .professor table td{
+        font-size: 12px;
+    }
 }
 
 
