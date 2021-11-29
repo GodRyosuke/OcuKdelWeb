@@ -692,4 +692,12 @@ footer .row {
 }
 
 
-
+/* 404 page */
+.content-404 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.content-404 h1 {
+    font-weight: 600;
+}
