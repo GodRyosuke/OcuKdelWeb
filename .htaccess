@@ -1,0 +1,4 @@
+AuthType     Basic
+AuthName     "ocu kdel page"
+AuthUserFile /virtual/testocukdel/public_html/testocukdel.shop/.htpasswd
+require valid-user
