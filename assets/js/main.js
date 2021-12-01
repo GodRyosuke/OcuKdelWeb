@@ -34,3 +34,21 @@ function hideMenu() {
     navLinks.style.right = "-200px";
     // navLinks.style.display = "none";
 }
+
+// while (1) {
+//     let UserInput = window.prompt("パスワードを入力して下さい:","");
+//     if( /\W+/g.test(UserInput) ) {
+//         // ▼半角英数字以外の文字が存在したらエラー
+//         alert("半角英数字のみを入力して下さい。");
+//      } else if ((UserInput != null) ) {
+//         location.href = UserInput + ".html";
+//         break;
+//     }
+// }
+
+// アクセス制限用
+function gate() {
+ }
+ document.querySelectorAll('.limit_access').forEach(function(button) {
+     button.addEventListener('click', gate);
+ });
