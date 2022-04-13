@@ -653,11 +653,13 @@ footer .row {
     margin: 30px auto;
 }
 .access .container {
+    width: 100%;
     display: flex;
-    flex-basis: 48%;
+    /* flex-basis: 48%; */
 }
 .access .addresses {
     padding: 0 15px;
+    flex: 1;
 }
 .access iframe {
     width: 100%;
@@ -685,6 +687,8 @@ footer .row {
 }
 .access form {
     text-align: center;
+    width: 100%;
+    flex: 1;
 }
 .access form input,
 .access form textarea {

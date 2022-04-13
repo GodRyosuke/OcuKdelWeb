@@ -1,49 +1,25 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OMU KDEL Takubo Laboratory</title>
-    <script src="https://kit.fontawesome.com/29d47546b5.js" crossorigin="anonymous"></script>
-    <!-- <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> 
-    <script src="assets/js/main.js" defer></script>
-    <link rel="stylesheet" href="./assets//css/tomorrow-night.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo">OMU<span>KDEL</span></a>
-        <!-- <div class="menuToggle" onclick="toggleMenu();">
-        </div> -->
-        <i class="fa fa-bars"></i>
-        <!-- <ul class="navigation">
-            <li><a href="#banner" class="nav-a">Home</a></li>
-            <li><a href="#about" class="nav-a">About</a></li>
-            <li><a href="#menu" class="nav-a">Menu</a></li>
-            <li><a href="#expert" class="nav-a">Expert</a></li>
-            <li><a href="#testimonials" class="nav-a">Testimonials</a></li>
-            <li><a href="#contact" class="nav-a">Contact</a></li>
-        </ul> -->
-        <div class="nav-links" id="navLinks">
-            <i class="fa fa-times"></i>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <!-- <li><a href="professors.html">professor</a></li> -->
-                <li><a href="member.html">MEMBER</a></li>
-                <li><a href="research.html">RESEARCH</a></li>
-                <li><a href="thesis.html">THESIS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </div>
-    </header> 
-    
+<?php get_header(); ?>
+
     <section class="banner" id="banner">
         <div class="content">
-            <h2>OSAKA CITY UNIVERSITY <span>KDEL</span></h2>
+            <h2>OSAKA METROPOLITAN UNIVERSITY <span>KDEL</span></h2>
             <p>私たちの研究室では，機械・情報工学をベースとしたロボット技術を活用し，社会に応用されるロボットのシステム開発に挑戦していきます．</p>
-            <a href="contact.html" class="btn">Contact Us</a>
+<?php
+$args = array(
+    'page_id' => 16
+);
+$query = new WP_Query($args);
+if ($query->have_posts()):
+    while ($query->have_posts()):
+        $query->the_post();
+
+?>
+            <a href="<?php the_permalink(); ?>" class="btn">Contact Us</a>
+<?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+?>
         </div>
     </section>
 
@@ -80,11 +56,26 @@
         <div class="row">
             <div class="pro-col">
                 <p>多脚ロボットや人間型ロボットの運動制御について研究を行っています．<br>機械工学と情報工学の観点から知的な運動生成を実現することで，将来的に実応用可能な多肢をもつロボットの開発を目指しています．また，多肢ロボットを扱う技術を応用することで，人間の移動を補助することを目的とした履物型移動装置の開発を行っています．ロボットを扱う，ひいては，モノを扱うことを考えた研究・開発は機械的な側面だけや情報処理の側面だけを見て実現できるものではありません．双方の知識による対象の理解と実装が理想通りに行われたときに目的とした制御が実現されます．私たちの研究室では，機械・情報工学をベースとしたロボット技術を活用し，社会に応用されるロボットのシステム開発に挑戦していきます．</p>
-                <a href="professors.html" class="btn">More details</a>
+<?php
+$args = array(
+    'page_id' => 10
+);
+$query = new WP_Query($args);
+if ($query->have_posts()):
+    while ($query->have_posts()):
+        $query->the_post();
+
+?>
+                <a href="<?php the_permalink(); ?>" class="btn">More details</a>
+<?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+?>
             </div>
             <div class="pro-col">
                 <div class="imgBx">
-                    <img src="./assets/img/testi2.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testi2.jpg" alt="">
                 </div>
                 <h2>田窪　朋仁（教授）</h2>
             </div>
@@ -123,7 +114,22 @@
                 </div>
             </div>
         </div>
-        <a href="research.html" class="btn">more details</a>
+<?php
+$args = array(
+    'page_id' => 12
+);
+$query = new WP_Query($args);
+if ($query->have_posts()):
+    while ($query->have_posts()):
+        $query->the_post();
+
+?>
+        <a href="<?php the_permalink(); ?>" class="btn">more details</a>
+<?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+?>
     </section>
 
     <section class="publications">
@@ -149,7 +155,22 @@
                 </ul>
             </div>
             <div class="pub-row">
-                <a href="thesis.html" class="btn">see more</a>
+<?php
+$args = array(
+    'page_id' => 14
+);
+$query = new WP_Query($args);
+if ($query->have_posts()):
+    while ($query->have_posts()):
+        $query->the_post();
+
+?>
+                <a href="<?php the_permalink(); ?>" class="btn">see more</a>
+<?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+?>
             </div>
         </div>
     </section>
@@ -157,41 +178,23 @@
     <section class="cta">
         <div class="content">
             <h1>For More Information, <br>Click Below!</h1>
-            <a href="contact.html" class="btn">contact us</a>
+<?php
+$args = array(
+    'page_id' => 16
+);
+$query = new WP_Query($args);
+if ($query->have_posts()):
+    while ($query->have_posts()):
+        $query->the_post();
+
+?>
+            <a href="<?php the_permalink(); ?>" class="btn">contact us</a>
+<?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+?>
         </div>
     </section>
 
-    <footer>
-        <div class="row">
-            <div class="footer-col">
-                <h2>menu</h2>
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="professors.html">professor</a></li>
-                    <li><a href="research.html">research</a></li>
-                    <li><a href="thesis.html">publication</a></li>
-                    <li><a href="member.html">member</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h2>links</h2>
-                <ul>
-                    <li><a href="www.osaka-cu.ac.jp">osaka city university</a></li>
-                    <li><a href="www.osakafu-u.ac.jp">osaka prefecture university</a></li>
-                    <li><a href="www.omu.ac.jp">osaka metropolitan university</a></li>
-                    <li><a href="#">previous our page</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <img src="./assets/img/bg2.jpg" alt="">
-            </div>
-        </div>
-        <div class="copy-right">
-            <p>2021 &copy; osaka city university kdel all rights researved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+<?php get_footer(); ?>
