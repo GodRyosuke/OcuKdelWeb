@@ -236,6 +236,28 @@ header .fa {
 section h1 {
     text-align: center;
 }
+
+/* news */
+.news {
+    width: 80%;
+    margin: 0 auto;
+}
+.news .content .news-row {
+    display: flex;
+    margin-bottom: 20px;
+}
+.news .content .news-row .date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 25%;
+    margin-right: 10px;
+}
+.news .content .news-row .news-content {
+    flex: 70%;
+}
+
+
 /* professor */
 .professor {
     width: 80%;
@@ -852,6 +874,13 @@ footer .row {
 .main-blog-content .main .content p {
     padding: 0;
 }
+.main-blog-content .main .content ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.main-blog-content .main .content ol li {
+    margin-bottom: 0.8rem;
+}
 .main-blog-content .main .content h1 {
     color: var(--accent-color);
     border-bottom: solid 5px var(--accent-color);
@@ -874,26 +903,44 @@ footer .row {
     font-size: 1rem;
     line-height: 2.0rem;
 }
-.main-blog-content .main .content .panel {
+
+/* program style */
+.panel {
+    overflow: hidden;
     margin: 20px 0;
+    border-radius: 10px;
 }
-.main-blog-content .main .content .panel .title {
+.panel input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.panel .tab-label {
     display: block;
     color: #111;
     text-decoration: none;
-    background-color: var(--main-color);
+    background-color: #ddd;
     padding: 5px 10px;
     width: 100%;
-    border: solid 1px var(--accent-color);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    cursor: pointer;
 }
-.main-blog-content .main .content .panel .program-content {
-    border: 1px solid var(--accent-color);
-    border-top: none;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+.panel .tab-label i {
+    margin-right: 10px;
+    transition: all 0.35s;
 }
+.panel .program-content {
+    max-height: 0;
+    background-color: #1d1f21;
+    transition: all 0.35s;
+}
+.panel input:checked + .tab-label i {
+    transform: rotate(90deg);
+}
+.panel input:checked ~ .program-content {
+    max-height: 1000vh;
+
+}
+
 pre {
     font-size: 0.8rem;
     padding: 0;
@@ -904,25 +951,35 @@ pre {
 pre code li {
     list-style-type: decimal !important;
     list-style-position: outside !important;
-    padding-left: 10px;
 }
 
 
-
+/* side bar */
 .main-blog-content .side-bar {
     flex: 30%;
+    padding: 20px;
+}
+.main-blog-content .side-bar .side-bar-sticky {
+    position: sticky;
+    top: 80px;
 }
 .main-blog-content .side-bar .cover {
-    padding: 20px;
     padding-top: 0;
+    padding-left: 20px;
 }
-.main-blog-content .side-bar ul {
+@media(max-width: 767px) {
+    .main-blog-content .side-bar {
+        display: none;
+    }
+}
+
+/* .main-blog-content .side-bar ol {
     list-style: none;
 }
-.main-blog-content .side-bar ul li a{
+.main-blog-content .side-bar ol li a{
     color: #111;
     text-decoration: none;
-}
+} */
 
 
 

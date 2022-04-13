@@ -7,9 +7,10 @@
     <title>OCU KDEL Takubo Laboratory</title>
     <script src="https://kit.fontawesome.com/29d47546b5.js" crossorigin="anonymous"></script>
     <!-- <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> 
     <script src="assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="./assets//css/tomorrow-night.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
     <header>
@@ -50,28 +51,42 @@
                     <span class="category">ROS</span>
                     <span class="date">2022.02.03</span>
                 </div>
-                <h1 id="install-for-windows">Windows環境へのROSインストール</h1>
+                <h1>Windows環境へのROSインストール</h1>
             </div>
             <img src="./assets/img/cafeteria.png" alt="">
             <div class="content">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ratione iure, esse porro soluta optio! Voluptas, quisquam sapiente? Nobis cupiditate, voluptatibus veniam consequuntur quasi fugit vitae unde beatae! Iure, debitis.</p>
                 <br>
-                <h1>インストール</h1>
+
+                <h1>目次</h1>
+                <ol>
+                    <li><a href="#">これは目次1です</a></li>
+                    <li><a href="#">これは目次2です</a></li>
+                    <li><a href="#">これは目次3です</a></li>
+                    <li><a href="#">これは目次4です</a></li>
+                    <li><a href="#">これは目次5です</a></li>
+                </ol>
+
+                <h1 id="install-for-windows">インストール</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id architecto, similique aperiam ullam esse deleniti a inventore ad, velit eos adipisci laborum incidunt, nobis officiis non cumque necessitatibus enim quam?</p>
                 <br>
+
                 <h2>For Windows10</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatum ducimus ipsam eaque earum, atque optio dolores voluptatibus in nulla neque iure repellat molestias at quibusdam debitis dolor. Commodi, soluta!</p>
                 <br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum architecto dolores voluptatem nihil! Ad recusandae dolorem reprehenderit aspernatur modi cum. Architecto ullam ratione voluptatum aut iusto eaque in optio commodi!</p>
+
+
+
                 <div class="panel">
-                    <a href="#" class="title">
-                        <span><i class="fa fa-angle-right"></i></span>
-                        <span class="name">プログラム1 : main.cpp</span>
-                    </a>
+                    <!-- <span><i class="fa fa-angle-right"></i></span> -->
+                    <input type="checkbox" id="check1" checked="checked">
+                    <label for="check1" class="tab-label"><i class="fa fa-angle-right"></i>プログラム1 : main.cpp</label>
                     <div class="program-content">
                         <pre>
                             <code class="prettyprint linenums">#include &lt;iostream&gt;
 
+// これはmain関数です
 int main(int argc, char** argv)
 {
     std::cout << "hello world\n";
@@ -80,6 +95,8 @@ int main(int argc, char** argv)
                         </pre>
                     </div>
                 </div>
+
+
 
                 <h2>For Ubuntu</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione autem recusandae sint a blanditiis dolorum sed reiciendis, minima voluptate, soluta cupiditate eligendi laudantium odio quasi odit, sequi quod accusamus fugit.</p>
@@ -94,14 +111,20 @@ int main(int argc, char** argv)
 
         </div>
         <div class="side-bar">
-            <h3>目次</h3>
-            <div class="cover">
-                <ol>
-                    <li><a href="#install-for-windows">これは1つめの目次です</a></li>
-                    <li><a href="#">これは1つめの目次です</a></li>
-                    <li><a href="#">これは1つめの目次です</a></li>
-                    <li><a href="#">これは1つめの目次です</a></li>
-                </ol>
+            <div class="side-bar-sticky">
+                <h3>目次</h3>
+                <div class="cover">
+                    <ol>
+                        <li><a href="#install-for-windows">これは1つめの目次です</a></li>
+                        <li><a href="#">これは1つめの目次です</a></li>
+                        <li><a href="#">これは1つめの目次です</a></li>
+                        <li><a href="#">これは1つめの目次です</a></li>
+                        <li><a href="#">これは1つめの目次です</a></li>
+                        <li><a href="#">これは1つめの目次です</a></li>
+                        <li><a href="#">これは1つめの目次です</a></li>
+                        <li><a href="#">これは1つめの目次です</a></li>
+                    </ol>
+                </div>
             </div>
         </div>
 
@@ -109,7 +132,7 @@ int main(int argc, char** argv)
 
 
 
-    <footer>
+    <footer class="sticky-stopper">
         <div class="row">
             <div class="footer-col">
                 <h2>menu</h2>
