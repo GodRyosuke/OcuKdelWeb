@@ -26,28 +26,26 @@ if ($query->have_posts()):
     <section class="news">
         <h1>NEWS</h1>
         <div class="content">
+<?php
+    $paged = get_query_var('paged', 1)?:1;
+    $args = array(
+        'category_name' => 'news',
+        'posts_per_page' => 6,
+        'paged' => $paged,
+    );
+    $my_posts = new WP_Query($args);
+    if ($my_posts->have_posts()):
+        while ($my_posts->have_posts()):
+            $my_posts->the_post();
+?>
             <div class="news-row">
-                <div class="date"><span>2022.03.25</span></div>
-                <div class="news-content"><a href="#">【まとめ】新型コロナウイルス感染症への対応について（本学の対策方針についてを更新）</a></div>
+                <div class="date"><span><?php  the_time('Y.m.d'); ?></span></div>
+                <div class="news-content"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
             </div>
-            <div class="news-row">
-                <div class="date"><span>2022.03.25</span></div>
-                <div class="news-content"><a href="#">【まとめ】新型コロナウイルス感染症への対応について（本学の対策方針についてを更新）</a></div>
-            </div>
-            <div class="news-row">
-                <div class="date"><span>2022.03.25</span></div>
-                <div class="news-content"><a href="#">【まとめ】新型コロナウイルス感染症への対応について（本学の対策方針についてを更新）</a></div>
-            </div>
-            <div class="news-row">
-                <div class="date"><span>2022.03.25</span></div>
-                <div class="news-content"><a href="#">【まとめ】新型コロナウイルス感染症への対応について（本学の対策方針についてを更新）</a></div>
-            </div>
-            <div class="news-row">
-                <div class="date"><span>2022.03.25</span></div>
-                <div class="news-content"><a href="#">【まとめ】新型コロナウイルス感染症への対応について（本学の対策方針についてを更新）</a></div>
-            </div>
-
-
+<?php
+        endwhile;
+    endif;
+?>
         </div>
     </section>
 

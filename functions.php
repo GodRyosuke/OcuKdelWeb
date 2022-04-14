@@ -24,3 +24,8 @@ register_nav_menus(
         'place_footer' => 'フッターナビ'
     )
 );
+
+// 記事の自動整形を無効化
+remove_filter('the_content', 'wpautop');
+// 抜粋の自動整形を無効化
+remove_filter('the_excerpt', 'wpautop'); 
