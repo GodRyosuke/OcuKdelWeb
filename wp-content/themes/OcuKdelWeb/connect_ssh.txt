@@ -17,7 +17,14 @@ scp -r C:\Users\kusumoto\Documents\webdata\godryosuke\notVisit\.htaccess godryos
 
 scp -r id* testocukdel@s203.xrea.com:/virtual/testocukdel/.ssh
 
+〇-rbash: cd: restrictedって表示されてcd public_htmlできない
+    chsh
+xxxx のシェルを変更します。
+新しいシェル [/bin/rbash]: /bin/bash //bashへのパス「/bin/bash」を入力
+パスワード:  //SSHのログインパスワードを入力
+シェルを変更しました。
 
+exit //一度ログアウトします
 
 〇xreaでSSL通信
 無料アカウントで与えられるshopドメインについて、
