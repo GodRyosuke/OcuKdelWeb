@@ -35,6 +35,30 @@ function hideMenu() {
     // navLinks.style.display = "none";
 }
 
+// フォームの送信
+jQuery(function ($) {
+    // $("#referrer").val(document.referrer);
+    $("#mailform").submit(function(){ 
+      $.ajax({
+        url : './form-handler.php',
+        type: 'POST',
+        dataType: 'json',
+        data: $(this).serialize()
+      })
+    //   .done( function(data){
+    //     $("#dispmsg").empty();
+    //     $("#dispmsg").html(data.dispmsg);
+    //     if(data.errflg != 1){
+    //       $("#mailform").remove();
+    //     }
+    //   })
+      .fail( function(data){
+        alert('メール送信に失敗しました');
+      })
+      return false;
+    });
+  });
+
 // blog pageのside bar
 // $( document ).ready(function() {
 //     var $sticky = $('.sticky');
@@ -76,8 +100,8 @@ function hideMenu() {
 // }
 
 // アクセス制限用
-function gate() {
- }
- document.querySelectorAll('.limit_access').forEach(function(button) {
-     button.addEventListener('click', gate);
- });
+// function gate() {
+//  }
+//  document.querySelectorAll('.limit_access').forEach(function(button) {
+//      button.addEventListener('click', gate);
+//  });
