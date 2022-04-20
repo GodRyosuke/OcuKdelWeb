@@ -15,6 +15,8 @@ $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
 
 mail($to, $email_subject, $email_body, $headers);
-// header("Location: contact.html");
+function hsc_utf8($str) {
+  return htmlspecialchars($str, ENT_QUOTES,'UTF-8');
+}
 
 ?>
