@@ -1,4 +1,9 @@
 <?php
+// json 形式のデータを扱うための定義
+header('Content-type: application/json');
+// PHP5.1.0以上はタイムゾーンの定義が必須
+date_default_timezone_set('Asia/Tokyo');
+
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
 $subject = $_POST['subject'];
@@ -16,5 +21,9 @@ $headers .= "Reply-To: $visitor_email \r\n";
 
 mail($to, $email_subject, $email_body, $headers);
 // header("Location: contact.html");
+// HTMLエスケープ処理
+function hsc_utf8($str) {
+    return htmlspecialchars($str, ENT_QUOTES,'UTF-8');
+  }
 
 ?>
