@@ -9,10 +9,10 @@
     <script src="https://kit.fontawesome.com/29d47546b5.js" crossorigin="anonymous"></script>
     <!-- <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> 
-    <script
+    <!-- <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js" defer></script>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets//css/tomorrow-night.css">

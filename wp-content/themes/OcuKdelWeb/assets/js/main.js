@@ -36,28 +36,31 @@ function hideMenu() {
 }
 
 // フォームの送信
-jQuery(function ($) {
-    // $("#referrer").val(document.referrer);
-    $("#mailform").submit(function(){ 
-      $.ajax({
-        url : './form-handler.php',
-        type: 'POST',
-        dataType: 'json',
-        data: $(this).serialize()
-      })
-    //   .done( function(data){
-    //     $("#dispmsg").empty();
-    //     $("#dispmsg").html(data.dispmsg);
-    //     if(data.errflg != 1){
-    //       $("#mailform").remove();
-    //     }
-    //   })
-      .fail( function(data){
-        alert('メール送信に失敗しました');
-      })
-      return false;
-    });
-  });
+// jQuery(function ($) {
+//     // $("#referrer").val(document.referrer);
+//     $("#mailform").submit(function(){ 
+//       $.ajax({
+//         url : './form-handler.php',
+//         type: 'POST',
+//         dataType: 'json',
+//         data: $(this).serialize()
+//       })
+//       .done( function(data){
+//         // $("#dispmsg").empty();
+//         // $("#dispmsg").html(data.dispmsg);
+//         if(data.errflg != 1){
+//           $("#mailform").remove();
+//           alert("送信できました。");
+//         } else {
+//           alert("送信できませんでした");
+//         }
+//       })
+//       .fail( function(data){
+//         alert('メール送信に失敗しました');
+//       })
+//       return false;
+//     });
+//   });
 
 // blog pageのside bar
 // $( document ).ready(function() {
